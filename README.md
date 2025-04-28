@@ -6,7 +6,7 @@ A machine learning-powered restaurant recommendation system based on user prefer
 
 ## 📌 Problem Statement
 
-The objective is to build a recommendation system based on restaurant data provided in a CSV file (`swiggy.csv`).  
+The objective is to build a recommendation system based on restaurant data provided in a CSV file (contained inside the `swiggy.rar` archive).  
 The system should recommend restaurants based on user input features such as:
 
 - City
@@ -20,8 +20,10 @@ The application uses **KMeans clustering** and **similarity-based filtering** to
 
 ## 📊 Dataset
 
-- File: `swiggy.csv`
-- Columns:
+- Archive File: `swiggy.rar`
+- Inside archive:
+  - `swiggy.csv` - Original restaurant dataset
+- Columns in CSV:
   - `id`, `name`, `city`, `rating`, `rating_count`, `cost`, `cuisine`, `lic_no`, `link`, `address`, `menu`
 - Categorical Features: `name`, `city`, `cuisine`
 - Numerical Features: `rating`, `rating_count`, `cost`
@@ -33,7 +35,7 @@ The application uses **KMeans clustering** and **similarity-based filtering** to
 | File | Description |
 |:-----|:------------|
 | `swiggy.py` | Main Streamlit application and recommendation logic |
-| `swiggy.csv` | Original restaurant dataset |
+| `swiggy.rar` | Compressed archive containing `swiggy.csv` dataset |
 | `clean_data.csv` | Cleaned data (created after cleaning) |
 | `encode_data.csv` | Encoded data with features |
 | `encoder.pkl` | Saved OneHotEncoder and MultiLabelBinarizer |
@@ -42,7 +44,7 @@ The application uses **KMeans clustering** and **similarity-based filtering** to
 
 ## ⚙️ Execution Flow
 
-1. Load and clean the dataset (`swiggy.csv`).
+1. Load and clean the dataset (`swiggy.csv` extracted from `swiggy.rar`).
 2. Display input widgets for user preferences (city, cuisine, rating, cost).
 3. After collecting inputs, perform:
    - Feature encoding
@@ -77,6 +79,9 @@ pip install pandas numpy streamlit scikit-learn
 
 3. **Check your environment**
 - Python 3.8+ recommended
+
+4. **Extract swiggy.rar**
+Make sure to extract `swiggy.csv` from `swiggy.rar` archive before running the project.
 
 ---
 
